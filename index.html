@@ -52,7 +52,7 @@
                         <td colspan="2"><strong>Fares Count</strong><br />' + (feature.properties['tipfare_count'] !== null ? Autolinker.link(String(feature.properties['tipfare_count'])) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Tip as % of Fare</strong><br />' + (feature.properties['tfmp'] !== null ? Autolinker.link(String(feature.properties['tfmp'])) : '') + '</td>\
+                        <td colspan="2"><strong>Median Tip as % of Fare</strong><br />' + (feature.properties['tfmp'] !== null ? Autolinker.link(feature.properties['tfmp'].toFixed(2)) : '') + '%</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
