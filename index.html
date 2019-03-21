@@ -49,61 +49,7 @@
         function pop_AggregatedTaxiPickupsTipasofFare_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? Autolinker.link(String(feature.properties['fid'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['left'] !== null ? Autolinker.link(String(feature.properties['left'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['bottom'] !== null ? Autolinker.link(String(feature.properties['bottom'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['right'] !== null ? Autolinker.link(String(feature.properties['right'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['top'] !== null ? Autolinker.link(String(feature.properties['top'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_count'] !== null ? Autolinker.link(String(feature.properties['tipfare_count'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_unique'] !== null ? Autolinker.link(String(feature.properties['tipfare_unique'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_min'] !== null ? Autolinker.link(String(feature.properties['tipfare_min'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_max'] !== null ? Autolinker.link(String(feature.properties['tipfare_max'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_range'] !== null ? Autolinker.link(String(feature.properties['tipfare_range'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_sum'] !== null ? Autolinker.link(String(feature.properties['tipfare_sum'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_mean'] !== null ? Autolinker.link(String(feature.properties['tipfare_mean'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_median'] !== null ? Autolinker.link(String(feature.properties['tipfare_median'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_stddev'] !== null ? Autolinker.link(String(feature.properties['tipfare_stddev'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_minority'] !== null ? Autolinker.link(String(feature.properties['tipfare_minority'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_majority'] !== null ? Autolinker.link(String(feature.properties['tipfare_majority'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_q1'] !== null ? Autolinker.link(String(feature.properties['tipfare_q1'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_q3'] !== null ? Autolinker.link(String(feature.properties['tipfare_q3'])) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['tipfare_iqr'] !== null ? Autolinker.link(String(feature.properties['tipfare_iqr'])) : '') + '</td>\
+                        <td colspan="2"><strong>Fares Count</strong><br />' + (feature.properties['tipfare_count'] !== null ? Autolinker.link(String(feature.properties['tipfare_count'])) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>Tip as % of Fare</strong><br />' + (feature.properties['tfmp'] !== null ? Autolinker.link(String(feature.properties['tfmp'])) : '') + '</td>\
@@ -113,88 +59,74 @@
         }
 
         function style_AggregatedTaxiPickupsTipasofFare_1_0(feature) {
-            if (feature.properties['tfmp'] >= 0.000000 && feature.properties['tfmp'] <= 5.000000 ) {
+            if (feature.properties['tfmp'] >= 0.000000 && feature.properties['tfmp'] <= 1.515151 ) {
                 return {
                 pane: 'pane_AggregatedTaxiPickupsTipasofFare_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.7)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(68,1,84,1.0)',
+                fillColor: 'rgba(68,1,84,0.7)',
             }
             }
-            if (feature.properties['tfmp'] >= 5.000000 && feature.properties['tfmp'] <= 10.000000 ) {
+            if (feature.properties['tfmp'] >= 1.515151 && feature.properties['tfmp'] <= 9.615385 ) {
                 return {
                 pane: 'pane_AggregatedTaxiPickupsTipasofFare_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.7)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(64,67,135,1.0)',
+                fillColor: 'rgba(58,82,139,0.7)',
             }
             }
-            if (feature.properties['tfmp'] >= 10.000000 && feature.properties['tfmp'] <= 15.000000 ) {
+            if (feature.properties['tfmp'] >= 9.615385 && feature.properties['tfmp'] <= 14.285714 ) {
                 return {
                 pane: 'pane_AggregatedTaxiPickupsTipasofFare_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.7)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(41,120,142,1.0)',
+                fillColor: 'rgba(32,144,141,0.7)',
             }
             }
-            if (feature.properties['tfmp'] >= 15.000000 && feature.properties['tfmp'] <= 20.000000 ) {
+            if (feature.properties['tfmp'] >= 14.285714 && feature.properties['tfmp'] <= 18.823529 ) {
                 return {
                 pane: 'pane_AggregatedTaxiPickupsTipasofFare_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.7)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(34,168,132,1.0)',
+                fillColor: 'rgba(93,201,98,0.7)',
             }
             }
-            if (feature.properties['tfmp'] >= 20.000000 && feature.properties['tfmp'] <= 25.000000 ) {
+            if (feature.properties['tfmp'] >= 18.823529 && feature.properties['tfmp'] <= 26.545454 ) {
                 return {
                 pane: 'pane_AggregatedTaxiPickupsTipasofFare_1',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: 'rgba(35,35,35,0.7)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(122,210,81,1.0)',
-            }
-            }
-            if (feature.properties['tfmp'] >= 25.000000 && feature.properties['tfmp'] <= 26.545454 ) {
-                return {
-                pane: 'pane_AggregatedTaxiPickupsTipasofFare_1',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(253,231,37,1.0)',
+                fillColor: 'rgba(253,231,37,0.7)',
             }
             }
         }
@@ -210,7 +142,7 @@
         bounds_group.addLayer(layer_AggregatedTaxiPickupsTipasofFare_1);
         map.addLayer(layer_AggregatedTaxiPickupsTipasofFare_1);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'Aggregated Taxi Pickups - Tip as % of Fare<br /><table><tr><td style="text-align: center;"><img src="legend/AggregatedTaxiPickupsTipasofFare_1_00500.png" /></td><td> 0.0 - 5.0%</td></tr><tr><td style="text-align: center;"><img src="legend/AggregatedTaxiPickupsTipasofFare_1_501001.png" /></td><td> 5.0 - 10.0%</td></tr><tr><td style="text-align: center;"><img src="legend/AggregatedTaxiPickupsTipasofFare_1_1001502.png" /></td><td> 10.0 - 15.0%</td></tr><tr><td style="text-align: center;"><img src="legend/AggregatedTaxiPickupsTipasofFare_1_1502003.png" /></td><td> 15.0 - 20.0%</td></tr><tr><td style="text-align: center;"><img src="legend/AggregatedTaxiPickupsTipasofFare_1_2002504.png" /></td><td> 20.0 - 25.0%</td></tr><tr><td style="text-align: center;"><img src="legend/AggregatedTaxiPickupsTipasofFare_1_2502655.png" /></td><td> 25.0 - 26.5%</td></tr></table>': layer_AggregatedTaxiPickupsTipasofFare_1,"Mapbox Streets v10": layer_MapboxStreetsv10_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'Aggregated Taxi Pickups - Tip as % of Fare<br /><table><tr><td style="text-align: center;"><img src="legend/AggregatedTaxiPickupsTipasofFare_1_00150.png" /></td><td> 0.0 - 1.5%</td></tr><tr><td style="text-align: center;"><img src="legend/AggregatedTaxiPickupsTipasofFare_1_15961.png" /></td><td> 1.5 - 9.6%</td></tr><tr><td style="text-align: center;"><img src="legend/AggregatedTaxiPickupsTipasofFare_1_961432.png" /></td><td> 9.6 - 14.3%</td></tr><tr><td style="text-align: center;"><img src="legend/AggregatedTaxiPickupsTipasofFare_1_1431883.png" /></td><td> 14.3 - 18.8%</td></tr><tr><td style="text-align: center;"><img src="legend/AggregatedTaxiPickupsTipasofFare_1_1882654.png" /></td><td> 18.8 - 26.5%</td></tr></table>': layer_AggregatedTaxiPickupsTipasofFare_1,"Mapbox Streets v10": layer_MapboxStreetsv10_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
